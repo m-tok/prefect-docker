@@ -1,0 +1,57 @@
+###
+### A complete description of a Prefect Deployment for flow 'cat'
+###
+name: prefect-docker-example
+description: null
+version: 03523a4b759bef58469f56ea5e3e351b
+# The work queue that will handle this deployment's runs
+work_queue_name: docker
+work_pool_name: null
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: null
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: cat
+manifest_path: null
+infrastructure:
+  type: docker-container
+  env: {}
+  labels: {}
+  name: prefect-docker-example
+  command: null
+  image: prefect-docker-example:latest
+  image_pull_policy: NEVER
+  image_registry: null
+  networks: []
+  network_mode: null
+  auto_remove: false
+  volumes: []
+  stream_output: true
+  memswap_limit: null
+  mem_limit: null
+  privileged: false
+  _block_document_id: 0308c03b-7d4b-43e1-85de-20d1bf7d2f0f
+  _block_document_name: prefect-docker-example
+  _is_anonymous: false
+  block_type_slug: docker-container
+  _block_type_slug: docker-container
+storage: null
+path: /opt/prefect/flows
+entrypoint: flows/cat_flow.py:cat
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    num_meows:
+      title: num_meows
+      position: 0
+      type: integer
+  required:
+  - num_meows
+  definitions: null
+timestamp: '2023-07-27T22:01:31.390158+00:00'
